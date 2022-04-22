@@ -103,6 +103,7 @@
     redshift
     mpv
     zsh
+    bitwarden-cli
     # An extremely fast alternative to grep that respects your gitignore
     ripgrep
     # A simple, fast and user-friendly alternative to find
