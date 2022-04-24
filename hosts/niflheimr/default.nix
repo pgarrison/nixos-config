@@ -114,6 +114,7 @@
     mcfly
     bat
     libreoffice
+    #  romkatv/zsh4humans needs packaging
   ];
   
   users.extraUsers.philip = {
