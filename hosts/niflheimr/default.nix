@@ -112,6 +112,7 @@
     tldr
     # An upgraded ctrl-r for Bash whose history results make sense for what you're working on right now
     mcfly
+    bat
   ];
   
   users.extraUsers.philip = {
@@ -132,6 +133,7 @@
   # };
 
   # List services that you want to enable:
+  services.printing.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
