@@ -82,9 +82,6 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    firefox
-    git
-    htop
     networkmanagerapplet
     nix-prefetch-scripts
     which
@@ -92,14 +89,12 @@
     lynx
     ranger
     feh
-    rxvt-unicode
     xsel
     autojump
     tree
     lshw
     scrot
     redshift
-    mpv
     zsh
     bitwarden-cli
     # An extremely fast alternative to grep that respects your gitignore
@@ -116,11 +111,23 @@
     foot # terminal emulator
     waybar # status bar
     rofi # launcher
+    bat
+    exa
+    firefox
+    fzf
+    mpv
+    #nixos-options
   ];
 
   programs.sway.enable = true;
   xdg.portal.wlr.enable = true; # support screensharing with sway
 
+  programs.git.enable = true;
+  programs.htop.enable = true;
+  programs.neovim.enable = true;
+
+
+  # redshift things
   location.latitude = 47.606;
   location.longitude = -122.332;
 
