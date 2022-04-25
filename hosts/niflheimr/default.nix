@@ -53,8 +53,6 @@
   #   "caps:escape" # map caps to escape.
   # };
 
-  services.xserver.desktopManager.gnome.enable = true;
-
   # support 32-bit OpenGL programs
   # hardware.opengl.driSupport32Bit = true;
 
@@ -109,13 +107,34 @@
     # A simple, fast and user-friendly alternative to find
     fd
     # A community effort to simplify man pages with practical examples
-    tldr
+    tealdeer
     # An upgraded ctrl-r for Bash whose history results make sense for what you're working on right now
-    mcfly
+    # mcfly
     bat
     libreoffice
     #  romkatv/zsh4humans needs packaging
+    foot # terminal emulator
+    waybar # status bar
+    rofi # launcher
   ];
+
+  programs.sway.enable = true;
+  xdg.portal.wlr.enable = true; # support screensharing with sway
+
+  location.latitude = 47.606;
+  location.longitude = -122.332;
+
+  services.redshift = {
+    enable = true;
+    brightness = {
+      day = "1.0";
+      night = "0.7";
+    };
+    temperature = {
+      day = 4900;
+      night = 4200;
+    };
+  };
   
   users.extraUsers.philip = {
     createHome = true;
