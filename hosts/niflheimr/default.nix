@@ -95,7 +95,6 @@
     lshw
     scrot
     redshift
-    zsh
     bitwarden-cli
     # An extremely fast alternative to grep that respects your gitignore
     ripgrep
@@ -103,8 +102,6 @@
     fd
     # A community effort to simplify man pages with practical examples
     tealdeer
-    # An upgraded ctrl-r for Bash whose history results make sense for what you're working on right now
-    # mcfly
     bat
     libreoffice
     #  romkatv/zsh4humans needs packaging
@@ -142,6 +139,7 @@
     };
   };
   
+  programs.fish.enable = true;
   users.extraUsers.philip = {
     createHome = true;
     extraGroups = ["wheel" "video" "audio" "disk" "networkmanager"];
@@ -149,6 +147,7 @@
     home = "/home/philip";
     isNormalUser = true;
     uid = 1000;
+    shell = pkgs.fish;
   };
 
   # Some programs need SUID wrappers, can be configured further or are

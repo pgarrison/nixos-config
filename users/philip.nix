@@ -26,4 +26,10 @@
     };
     userName = "Philip Garrison";
   };
+
+  # An upgraded ctrl-r for Bash whose history results make sense for what you're working on right now
+  programs.mcfly = {
+    enable = true;
+    enableFishIntegration = true;
+  };
 }
