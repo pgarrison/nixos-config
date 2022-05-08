@@ -122,7 +122,6 @@
   programs.sway.enable = true;
   xdg.portal.wlr.enable = true; # support screensharing with sway
 
-  programs.git.enable = true;
   programs.htop.enable = true;
   programs.neovim.enable = true;
 
