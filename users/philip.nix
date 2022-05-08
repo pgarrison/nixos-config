@@ -32,4 +32,12 @@
     enable = true;
     enableFishIntegration = true;
   };
+
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      # disable startup shell message
+      set fish_greeting
+    '';
+  };
 }
