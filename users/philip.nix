@@ -50,6 +50,8 @@
       # lualine
       # nvim-tree
       vim-surround
+      gruvbox
     ];
+    extraConfig = "colorscheme gruvbox";
   };
 }
