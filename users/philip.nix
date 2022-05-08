@@ -40,4 +40,15 @@
       set fish_greeting
     '';
   };
+
+  programs.neovim = {
+    enable = true;
+    vimAlias = true; # symlink vim
+    plugins = with pkgs.vimPlugins; [
+      vim-nix
+      # bufferline
+      # lualine
+      # nvim-tree
+    ];
+  };
 }
