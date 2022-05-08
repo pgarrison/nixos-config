@@ -49,6 +49,7 @@
       # bufferline
       # lualine
       # nvim-tree
+      vim-surround
     ];
   };
 }
