@@ -121,6 +121,7 @@
     # A community effort to simplify man pages with practical examples
     tealdeer
     tree
+    vscodium
     wget
     which
     xsel

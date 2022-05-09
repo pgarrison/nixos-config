@@ -5,6 +5,7 @@ rec {
     nix-colors.homeManagerModule
     ../modules/waybar.nix
     ../modules/sway.nix
+    ../modules/fnott.nix
   ];
 
   modules.waybar = {
