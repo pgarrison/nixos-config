@@ -79,7 +79,10 @@ rec {
       vim-surround
       gruvbox
     ];
-    extraConfig = "colorscheme gruvbox";
+    extraConfig = ''
+      set number
+      colorscheme gruvbox
+    '';
   };
 
   programs.foot = {
