@@ -44,10 +44,14 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  services.xserver.libinput.enable = true;
+  # touchpad support, if not enabled by default in display manager
+  #services.xserver.libinput.enable = true;
+
+  #services.xserver.displayManager.gdm.enable = true;
+  #services.xserver.displayManager.gdm.wayland = true;
 
   # Configure keymap in X11
-  services.xserver.layout = "us";
+  #services.xserver.layout = "us";
   # services.xserver.xkbOptions = {
   #   "eurosign:e";
   #   "caps:escape" # map caps to escape.
@@ -80,6 +84,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    qt5.qtwayland # For sway/gdm/wayland
     wget
     networkmanagerapplet
     nix-prefetch-scripts
@@ -147,6 +152,10 @@
     uid = 1000;
     shell = pkgs.fish;
   };
+
+  environment.loginShellInit = ''
+    [[ "$(tty)" == /dev/tty1 ]] && sway
+  '';
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

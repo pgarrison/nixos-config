@@ -63,6 +63,7 @@ rec {
 
   wayland.windowManager.sway = {
     enable = true;
+    wrapperFeatures = { base = true; gtk = true; };
 
     config = rec {
       seat."*" = {
@@ -209,5 +210,13 @@ rec {
         };
       };
     };
+
+    extraSessionCommands = ''
+      export SDL_VIDEODRIVER=wayland
+
+      # needs qt5.qtwayland in systemPackages
+      export QT_QPA_PLATFORM=wayland
+      export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+    '';
   };
 }
