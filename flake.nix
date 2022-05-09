@@ -1,4 +1,3 @@
-
 {
   description = "Philip's personal machine";
 

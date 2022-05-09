@@ -111,7 +111,6 @@
     libreoffice
     #  romkatv/zsh4humans needs packaging
     foot # terminal emulator
-    waybar # status bar
     rofi # launcher
     bat
     exa
