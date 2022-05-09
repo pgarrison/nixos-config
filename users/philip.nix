@@ -30,6 +30,8 @@ rec {
 
   modules.sway.enable = true;
 
+  modules.fnott.enable = true;
+
   colorscheme = nix-colors.colorSchemes.gruvbox-dark-medium;
 
   # Home Manager needs a bit of information about you and the

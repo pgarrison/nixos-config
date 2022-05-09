@@ -5,10 +5,12 @@ with lib;
 let
   cfg = config.modules.fnott;
 
+  fontName = "JetBrains Mono";
+
   defaults = {
-    summary-font = "${config.gtk.font.name}:size=10:weight=bold";
-    title-font = "${config.gtk.font.name}:size=6:weight=bold:slant=italic";
-    body-font = "${config.gtk.font.name}:size=8:weight=regular";
+    summary-font = "${fontName}:size=10:weight=bold";
+    title-font = "${fontName}:size=6:weight=bold:slant=italic";
+    body-font = "${fontName}:size=8:weight=regular";
     default-timeout = 5;
   };
 in
@@ -29,7 +31,7 @@ in
       settings = {
         main = {
           notification-margin = 15;
-          icon-theme = config.gtk.iconTheme.name;
+          #icon-theme = config.gtk.iconTheme.name; # TODO
         };
 
         low = {

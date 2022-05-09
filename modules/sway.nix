@@ -175,6 +175,9 @@ in
           # layout
           "${modifier}+v" = "splitt";
           "${modifier}+t" = "layout toggle"; # This and the one above are the same??
+
+          # fnott notifications
+          "${modifier}+n" = "fnottctl dismiss";
         };
 
         modes = {
