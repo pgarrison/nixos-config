@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/fonts.nix
     ];
 
   boot.initrd.luks.devices = {
@@ -42,7 +43,7 @@
   # };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  #services.xserver.enable = true;
 
   # touchpad support, if not enabled by default in display manager
   #services.xserver.libinput.enable = true;
