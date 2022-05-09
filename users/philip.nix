@@ -107,9 +107,9 @@ rec {
     wrapperFeatures = { base = true; gtk = true; };
 
     config = rec {
-      seat."*" = {
-        hide_cursor = "when-typing enabled";
-      };
+      #seat."*" = {
+        #hide_cursor = "when-typing enabled";
+      #};
 
       fonts = {
         names = [ "JetBrains Mono" ];

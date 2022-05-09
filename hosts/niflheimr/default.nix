@@ -46,7 +46,7 @@
   #services.xserver.enable = true;
 
   # touchpad support, if not enabled by default in display manager
-  #services.xserver.libinput.enable = true;
+  services.xserver.libinput.enable = true;
 
   #services.xserver.displayManager.gdm.enable = true;
   #services.xserver.displayManager.gdm.wayland = true;
@@ -155,7 +155,7 @@
   };
 
   environment.loginShellInit = ''
-    [[ "$(tty)" == /dev/tty1 ]] && sway
+    [[ "$(tty)" == /dev/tty1 ]] && WLR_NO_HARDWARE_CURSORS=1 sway
   '';
 
   # Some programs need SUID wrappers, can be configured further or are
