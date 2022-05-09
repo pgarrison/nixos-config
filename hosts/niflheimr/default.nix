@@ -117,7 +117,6 @@
     ripgrep
     scrot
     signal-desktop
-    steam
     # A community effort to simplify man pages with practical examples
     tealdeer
     tree
@@ -139,6 +138,12 @@
     "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
     "nngceckbapebfimnlniiiahkandclblb" # bitwarden
   ];
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
 
   # redshift things
   location.latitude = 47.606;
