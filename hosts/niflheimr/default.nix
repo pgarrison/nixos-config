@@ -46,7 +46,7 @@
   #services.xserver.enable = true;
 
   # touchpad support, if not enabled by default in display manager
-  services.xserver.libinput.enable = true;
+  #services.xserver.libinput.enable = true;
 
   #services.xserver.displayManager.gdm.enable = true;
   #services.xserver.displayManager.gdm.wayland = true;
