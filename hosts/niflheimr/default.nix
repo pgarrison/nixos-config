@@ -115,7 +115,6 @@
     #nixos-options
   ];
 
-  programs.sway.enable = true;
   xdg.portal.wlr.enable = true; # support screensharing with sway
 
   programs.htop.enable = true;

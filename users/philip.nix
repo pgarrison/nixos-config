@@ -1,6 +1,6 @@
 { config, pkgs, nix-colors, ... }:
 
-{
+rec {
   imports = [
     nix-colors.homeManagerModule
   ];
@@ -59,5 +59,76 @@
       gruvbox
     ];
     extraConfig = "colorscheme gruvbox";
+  };
+
+  wayland.windowManager.sway = {
+    enable = true;
+
+    config = {
+      seat."*" = {
+        hide_cursor = "when-typing enabled";
+      };
+
+      fonts = {
+        names = [ "JetBrains Mono" ];
+        size = 10.0;
+      };
+
+      gaps = {
+        inner = 10;
+        outer = 4;
+      };
+
+      window = {
+        titlebar = false;
+        border = 3;
+      };
+
+      floating = {
+        border = 2;
+        criteria = [
+          {
+            class = "firefox";
+            title =  "Picture-in-Picture";
+          }
+          { app_id = "mpv"; }
+        ];
+      };
+
+      modifier = "Mod4";
+
+      bars = [{ command = "waybar"; }];
+
+      colors = with colorscheme.colors; {
+        focused = {
+          border = "#${base0D}";
+          background = "#${base0D}";
+          text = "#${base00}";
+          indicator = "#${base0F}";
+          childBorder = "";
+        };
+        focusedInactive = {
+          border = "#${base00}";
+          background = "#${base00}";
+          text = "#${base06}";
+          indicator = "#${base0F}";
+          childBorder = "";
+        };
+        unfocused = {
+          border = "#${base00}";
+          background = "#${base00}";
+          text = "#${base06}";
+          indicator = "#${base0F}";
+          childBorder = "";
+        };
+        urgent = {
+          border = "#${base08}";
+          background = "#${base08}";
+          text = "#${base00}";
+          indicator = "#${base0F}";
+          childBorder = "";
+        };
+      };
+    };
   };
 }
