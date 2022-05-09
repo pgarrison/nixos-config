@@ -11,9 +11,9 @@ rec {
     enable = true;
     bars."eDP-1" = {
       modules-left = [
-        #"custom/scratchpad"
+        #"custom/scratchpad" # Turns windows into floating windows
         "sway/workspaces"
-        #"sway/mode"
+        #"sway/mode" # Seems to have no effect?
       ];
       modules-center = [ "mpd" ];
       modules-right = [

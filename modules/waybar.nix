@@ -55,7 +55,7 @@ in
       settings = mapAttrsToList (output: v: {
         inherit output;
         layer = "bottom";
-        position = "top";
+        position = "bottom";
         margin = "8";
         modules-left = v.modules-left;
         modules-center = v.modules-center;
