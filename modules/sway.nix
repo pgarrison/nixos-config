@@ -70,13 +70,13 @@ in
         };
 
         gaps = {
-          inner = 10;
+          inner = 4;
           outer = 4;
         };
 
         window = {
           titlebar = false;
-          border = 3;
+          border = 2;
         };
 
         floating = {
@@ -97,7 +97,7 @@ in
           "${modifier}+Return" = "exec ${pkgs.foot}/bin/foot";
 
           # open launcher
-          "${modifier}+p" = ''exec ${toString [
+          "${modifier}+d" = ''exec ${toString [
             "fuzzel -P 'run: '"
             "-f 'JetBrains Mono:size=10'" #"-i '${config.gtk.iconTheme.name}'"
             "-r 2 -B 3 -y 20 -p 10"
@@ -106,7 +106,7 @@ in
             "-s '${colorscheme.colors.base02}ff' -S '${colorscheme.colors.base06}ff'"
           ]}'';
 
-          "${modifier}+Shift+c" = "kill";
+          "${modifier}+Shift+q" = "kill";
 
           "${modifier}+h" = "focus left";
           "${modifier}+j" = "focus down";
@@ -174,10 +174,7 @@ in
 
           # layout
           "${modifier}+v" = "splitt";
-          "${modifier}+t" = "layout toggle";
-
-          "${modifier}+q" = "reload";
-          "${modifier}+Shift+q" = "exec swaymsg exit";
+          "${modifier}+t" = "layout toggle"; # This and the one above are the same??
         };
 
         modes = {

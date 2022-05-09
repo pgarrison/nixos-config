@@ -84,9 +84,12 @@ in
         };
 
         "pulseaudio" = {
-          format = "🐹 {volume}%";
-          format-muted = "🐹 Muted";
+          format = "{icon} {volume}%";
+          format-muted = "🔇";
+          format-source-muted = "🔇 (source)";
+          format-bluetooth = " {volume}%";
           format-icons = {
+            headphones = "";
             default = [ "奄" "奔" "墳" ];
           };
           on-click = "pamixer -t";
@@ -95,8 +98,9 @@ in
         };
 
         "battery" = {
-          format = "🐻 {capacity}%";
-          format-plugged = "🐻 {capacity}%";
+          format = "{icon} {capacity}%";
+          format-plugged = "🔌 {capacity}%";
+          format-icons = [" " " " " " " " " "];
           interval = 5;
           states = {
             warning = 30;

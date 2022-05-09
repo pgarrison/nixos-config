@@ -9,7 +9,10 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/fonts.nix
+      ../../modules/wayland.nix
     ];
+
+  modules.wayland.enable = true;
 
   boot.initrd.luks.devices = {
     root = {
@@ -82,49 +85,59 @@
     experimental-features = nix-command flakes
   '';
 
+  nixpkgs.config.allowUnfree = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    qt5.qtwayland # For sway/gdm/wayland
-    wget
-    networkmanagerapplet
-    nix-prefetch-scripts
-    which
-    curl
-    lynx
-    ranger
-    feh
-    xsel
     autojump
-    tree
-    lshw
-    scrot
-    redshift
+    bat
     bitwarden-cli
-    # An extremely fast alternative to grep that respects your gitignore
-    ripgrep
+    chromium
+    curl
+    exa
     # A simple, fast and user-friendly alternative to find
     fd
+    feh
+    firefox
+    foot # terminal emulator
+    fzf
+    lshw
+    lynx
+    mpv
+    networkmanagerapplet
+    #nixos-options
+    nix-prefetch-scripts
+    pamixer
+    qt5.qtwayland # For sway/gdm/wayland. Maybe unneeded?
+    ranger
+    rbw # community bitwarden cli (replaces bitwarden-cli)
+    redshift
+    # An extremely fast alternative to grep that respects your gitignore
+    ripgrep
+    scrot
+    signal-desktop
+    steam
     # A community effort to simplify man pages with practical examples
     tealdeer
-    bat
-    libreoffice
+    tree
+    wget
+    which
+    xsel
+    zoom-us # very unfree
     #  romkatv/zsh4humans needs packaging
-    foot # terminal emulator
-    rofi # launcher
-    bat
-    exa
-    firefox
-    fzf
-    mpv
-    #nixos-options
   ];
 
   xdg.portal.wlr.enable = true; # support screensharing with sway
 
   programs.htop.enable = true;
   programs.neovim.enable = true;
+  programs.light.enable = true; # backlight
 
+  programs.chromium.extensions = [
+    "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
+    "nngceckbapebfimnlniiiahkandclblb" # bitwarden
+  ];
 
   # redshift things
   location.latitude = 47.606;
