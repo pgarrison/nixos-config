@@ -67,10 +67,10 @@ in
         };
 
         "network" = {
-          format = "🐑 {ipaddr}";
+          format = "🐑 {essid}";
           format-disconnect = "Disconnected";
           format-alt = "⬆️ {bandwidthUpBits} ⬇️ {bandwidthDownBits}";
-          tooltip-format = "{ifname}";
+          tooltip-format = "{ifname}: {signalStrength}%";
           max-length = 40;
           interval = 1;
         };
@@ -161,7 +161,7 @@ in
         /* waybar */
         window#waybar {
           font-family: 'JetBrains Mono', 'JetBrainsMonoMedium Nerd Font';
-          font-size: 16px;
+          font-size: 10px;
           background: none;
           color: #${base06};
         }

@@ -17,9 +17,9 @@ rec {
       ];
       modules-center = [ "mpd" ];
       modules-right = [
-        #"tray"
+        "tray"
         "idle_inhibitor"
-        #"pulseaudio"
+        "pulseaudio"
         "battery"
         "network"
         "clock"
