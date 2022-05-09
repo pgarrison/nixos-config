@@ -4,21 +4,22 @@ rec {
   imports = [
     nix-colors.homeManagerModule
     ../modules/waybar.nix
+    ../modules/sway.nix
   ];
 
   modules.waybar = {
     enable = true;
     bars."eDP-1" = {
       modules-left = [
-        "custom/scratchpad"
+        #"custom/scratchpad"
         "sway/workspaces"
-        "sway/mode"
+        #"sway/mode"
       ];
       modules-center = [ "mpd" ];
       modules-right = [
-        "tray"
+        #"tray"
         "idle_inhibitor"
-        "pulseaudio"
+        #"pulseaudio"
         "battery"
         "network"
         "clock"
