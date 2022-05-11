@@ -98,6 +98,7 @@
     curl
     curlie # more user-friendly curl
     exa
+    expect
     fd # A simple, fast and user-friendly alternative to find
     feh
     firefox
@@ -191,8 +192,7 @@
   services.printing.enable = true;
   programs.system-config-printer.enable = true;
 
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  programs.ssh.startAgent = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
