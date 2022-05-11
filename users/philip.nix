@@ -34,8 +34,9 @@ rec {
     enable = true;
     wallpaper = pkgs.fetchurl {
       # Photography by Galen Weld https://galenweld.com/
-      url = "https://images.squarespace-cdn.com/content/v1/59c1330ae9bfdfe92e1c9bb9/1505864959567-NWWJ27VYQ5ZGXYYKTXD9/mountains_site-32.jpg";
-      hash = "sha256-nyyNyrqVUzjr9b4YvmTEU4ZA+TAMmZDWJ2b8Fp+t+Jg=";
+      # Sand dunes at Stokknses and the famous Vesturhorn mountain at sunrise.
+      url = "https://images.squarespace-cdn.com/content/v1/59c1330ae9bfdfe92e1c9bb9/1574630555464-UIPILHHVFNT39E4BBVLM/recent_work_2018_19-1.jpg";
+      hash = "sha256-MQX3Tc+rW6u+XSO3gM2+lpy6q/fsVrMOkoQ5i/Dde64=";
     };
   };
 
