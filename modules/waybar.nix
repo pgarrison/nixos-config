@@ -131,6 +131,10 @@ in
           on-scroll-down = "mpc volume -1";
         };
 
+        "disk" = {
+          format = "{path} {free}";
+        };
+
         # sway only
         "sway/workspaces" = {
           format = "{name}";
@@ -181,6 +185,7 @@ in
         #backlight,
         #battery,
         #clock,
+        #disk,
         #mode,
         #tray,
         #mpd {

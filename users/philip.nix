@@ -21,9 +21,10 @@ rec {
       modules-right = [
         "tray"
         "idle_inhibitor"
+        "network"
+        "disk"
         "pulseaudio"
         "battery"
-        "network"
         "clock"
       ];
     };
