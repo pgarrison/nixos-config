@@ -54,6 +54,8 @@ rec {
 
   home.sessionVariables = {
     EDITOR = "vim";
+    MOZ_ENABLE_WAYLAND = 1;
+    XDG_CURRENT_DESKTOP = "sway";
   };
 
   programs.git = {
