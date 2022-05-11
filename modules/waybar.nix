@@ -56,13 +56,13 @@ in
         inherit output;
         layer = "bottom";
         position = "bottom";
-        margin = "8";
+        margin = "4";
         modules-left = v.modules-left;
         modules-center = v.modules-center;
         modules-right = v.modules-right;
 
         "tray" = {
-          icon-size = 16;
+          icon-size = 14;
           spacing = 8;
         };
 
