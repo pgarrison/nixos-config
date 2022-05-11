@@ -103,11 +103,15 @@ rec {
     # Added to .zshrc
     initExtra = ''
       bindkey '^[[27;5;13~' autosuggest-execute
+      bindkey ' ' magic-space
+      bindkey "$terminfo[kcuu1]" history-substring-search-up
+      bindkey "$terminfo[kcud1]" history-substring-search-down
     '';
 
     oh-my-zsh = {
       enable = true;
       plugins = [
+        "history-substring-search"
       ];
     };
     prezto = {
