@@ -173,6 +173,8 @@
     shell = pkgs.zsh;
   };
 
+  services.getty.autologinUser = "philip";
+
   environment.loginShellInit = ''
     [[ "$(tty)" == /dev/tty1 ]] && WLR_NO_HARDWARE_CURSORS=1 sway
   '';
