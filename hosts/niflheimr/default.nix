@@ -131,6 +131,11 @@
 
   xdg.portal.wlr.enable = true; # support screensharing with sway
 
+  services.physlock = {
+    enable = true;
+    lockMessage = ":)";
+  };
+
   programs.htop.enable = true;
   programs.neovim.enable = true;
   programs.light.enable = true; # backlight
