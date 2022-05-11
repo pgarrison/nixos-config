@@ -169,7 +169,7 @@ in
         /* waybar */
         window#waybar {
           font-family: 'JetBrains Mono', 'JetBrainsMonoMedium Nerd Font';
-          font-size: 10px;
+          font-size: 12px;
           background: none;
           color: #${base06};
         }

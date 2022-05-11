@@ -146,7 +146,7 @@ rec {
         app-id = "foot";
         title = "foot";
         term = "xterm-256color";
-        font = "JetBrains Mono:size=8";
+        font = "JetBrains Mono:size=10";
         pad = "10x10";
       };
 

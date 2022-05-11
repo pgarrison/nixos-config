@@ -125,6 +125,7 @@
     vscodium
     wget
     which
+    wlr-randr
     xsel
     zoom-us # very unfree
     #  romkatv/zsh4humans needs packaging

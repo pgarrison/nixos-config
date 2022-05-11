@@ -35,6 +35,7 @@ in
       pamixer
       sway-contrib.grimshot
       wf-recorder
+      wlr-randr
     ];
 
     wayland.windowManager.sway = {
@@ -43,6 +44,13 @@ in
       wrapperFeatures = { base = true; gtk = true; };
       #xwayland = cfg.xwayland;
       config = rec {
+        startup = [
+          {
+            command = "wlr-randr --output eDP-1 --scale 1.5";
+            always = true;
+          }
+        ];
+
         /*
         input = {
           "type:keyboard" = {
@@ -71,7 +79,7 @@ in
 
         fonts = {
           names = [ "JetBrains Mono" ];
-          size = 10.0;
+          size = 12.0;
         };
 
         gaps = {
