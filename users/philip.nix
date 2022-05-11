@@ -33,8 +33,9 @@ rec {
   modules.sway = {
     enable = true;
     wallpaper = pkgs.fetchurl {
-      url = "https://files.catbox.moe/jv3ywu.jpg";
-      hash = "sha256-3oHN2lEYUbagehGBf5CIVLCjA+HhZv6WECeV9bqVfJE=";
+      # Photography by Galen Weld https://galenweld.com/
+      url = "https://images.squarespace-cdn.com/content/v1/59c1330ae9bfdfe92e1c9bb9/1505864959567-NWWJ27VYQ5ZGXYYKTXD9/mountains_site-32.jpg";
+      hash = "sha256-nyyNyrqVUzjr9b4YvmTEU4ZA+TAMmZDWJ2b8Fp+t+Jg=";
     };
   };
 
