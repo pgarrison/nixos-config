@@ -120,6 +120,7 @@ rec {
 
   programs.foot = {
     enable = true;
+    # available settings defined here: https://codeberg.org/dnkl/foot/src/branch/master/foot.ini
     settings = {
       main = {
         app-id = "foot";
@@ -156,6 +157,8 @@ rec {
         bright6 = colors.base0C;
         bright7 = colors.base07;
       };
+
+      scrollback.lines = 10000; # default 1000
     };
   };
 }
