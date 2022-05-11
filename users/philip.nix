@@ -6,6 +6,7 @@ rec {
     ../modules/waybar.nix
     ../modules/sway.nix
     ../modules/fnott.nix
+    ../modules/shell/alias.nix
   ];
 
   modules.waybar = {

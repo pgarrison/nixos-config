@@ -13,7 +13,6 @@
       system = "x86_64-linux";
       modules = [
         ./hosts/niflheimr/default.nix
-        ./modules/shell/alias.nix
         home.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
