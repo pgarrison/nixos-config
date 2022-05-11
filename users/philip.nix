@@ -90,6 +90,12 @@ rec {
     enableSyntaxHighlighting = true;
     history.save = 100000; # number of lines to save
     history.size = 100000; # number of lines to keep. What's the difference?
+
+    # Added to .zshrc
+    initExtra = ''
+      bindkey '^[[27;5;13~' autosuggest-execute
+    '';
+
     oh-my-zsh = {
       enable = true;
       plugins = [
