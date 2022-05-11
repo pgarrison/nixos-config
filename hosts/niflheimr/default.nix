@@ -127,6 +127,7 @@
     which
     wlr-randr
     xsel
+    zathura
     zoom-us # very unfree
     #  romkatv/zsh4humans needs packaging
   ];
