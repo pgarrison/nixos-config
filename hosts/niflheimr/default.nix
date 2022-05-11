@@ -103,6 +103,7 @@
     firefox
     foot # terminal emulator
     fzf
+    glances
     grim # screenshots
     lshw
     lynx
