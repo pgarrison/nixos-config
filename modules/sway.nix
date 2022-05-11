@@ -96,6 +96,7 @@ in
           ];
         };
 
+        # Mod1 is alt, Mod4 is windows key
         modifier = "Mod4";
         keybindings = {
           # open terminal
@@ -127,7 +128,7 @@ in
           #"${modifier}+space" = "focus mode_toggle";
 
           # modes
-          #"${modifier}+r" = "mode resize";
+          "${modifier}+r" = "mode resize";
           #"${modifier}+F11" = "mode passthrough";
 
           "${modifier}+1" = "workspace number 1";
@@ -148,6 +149,8 @@ in
           "${modifier}+Shift+7" = "move container to workspace number 7";
           "${modifier}+Shift+8" = "move container to workspace number 8";
           "${modifier}+Shift+9" = "move container to workspace number 9";
+          "${modifier}+Tab" = "workspace next";
+          "${modifier}+Shift+Tab" = "workspace prev";
 
           # scratchpad
           "${modifier}+Shift+minus" = "move scratchpad";
@@ -179,13 +182,11 @@ in
 
           # layout
           "${modifier}+v" = "splitt";
-          "${modifier}+t" = "layout toggle"; # This and the one above are the same??
 
           # fnott notifications
           "${modifier}+n" = "fnottctl dismiss";
         };
 
-        /*
         modes = {
           resize = {
             "h" = "resize shrink width 50 px";
@@ -196,9 +197,8 @@ in
             "Return" = "mode default";
           };
 
-          passthrough = { "${modifier}+F11" = "mode default"; };
+          #passthrough = { "${modifier}+F11" = "mode default"; };
         };
-        */
 
         bars = [{ command = "waybar"; }];
         colors = with colorscheme.colors; {
