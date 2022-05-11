@@ -214,14 +214,14 @@ in
             border = "#${base00}";
             background = "#${base00}";
             text = "#${base06}";
-            indicator = "#${base0F}";
+            indicator = "#${base00}";
             childBorder = "";
           };
           unfocused = {
             border = "#${base00}";
             background = "#${base00}";
             text = "#${base06}";
-            indicator = "#${base0F}";
+            indicator = "#${base00}";
             childBorder = "";
           };
           urgent = {
