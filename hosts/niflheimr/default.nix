@@ -91,29 +91,28 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     autojump
-    bat
+    bat # better cat
     bitwarden-cli
+    cava # alsa visualizations
     chromium
     curl
+    curlie # more user-friendly curl
     exa
-    # A simple, fast and user-friendly alternative to find
-    fd
+    fd # A simple, fast and user-friendly alternative to find
     feh
     firefox
     foot # terminal emulator
     fzf
-    grim
+    grim # screenshots
     lshw
     lynx
     mpv
     networkmanagerapplet
-    #nixos-options
     nix-prefetch-scripts
     pamixer
     peek
     qt5.qtwayland # For sway/gdm/wayland. Maybe unneeded?
     ranger
-    rbw # community bitwarden cli (replaces bitwarden-cli)
     redshift
     # An extremely fast alternative to grep that respects your gitignore
     ripgrep
@@ -127,6 +126,7 @@
     which
     xsel
     zoom-us # very unfree
+    zsh
     #  romkatv/zsh4humans needs packaging
   ];
 
