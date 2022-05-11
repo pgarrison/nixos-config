@@ -111,7 +111,6 @@
     networkmanagerapplet
     nix-prefetch-scripts
     pamixer
-    peek
     qt5.qtwayland # For sway/gdm/wayland. Maybe unneeded?
     ranger
     redshift
