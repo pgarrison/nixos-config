@@ -195,6 +195,7 @@ in
             "l" = "resize grow width 50 px";
             "Escape" = "mode default";
             "Return" = "mode default";
+            "${modifier}+r" = "mode default";
           };
 
           #passthrough = { "${modifier}+F11" = "mode default"; };
