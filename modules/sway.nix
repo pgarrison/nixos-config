@@ -16,6 +16,11 @@ in
         type = types.bool;
         default = true;
       };
+
+      wallpaper = mkOption {
+        type = types.nullOr types.path;
+        default = null;
+      };
     };
   };
 
@@ -60,8 +65,8 @@ in
           hide_cursor = "when-typing enabled";
         };
 
-        output."*" = mkIf (specialArgs ? wallpaper) {
-          bg = "${specialArgs.wallpaper} fill";
+        output."*" = mkIf (!(isNull cfg.wallpaper)) {
+          bg = "${cfg.wallpaper} fill";
         };
 
         fonts = {

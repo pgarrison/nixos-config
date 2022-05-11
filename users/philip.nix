@@ -30,7 +30,13 @@ rec {
     };
   };
 
-  modules.sway.enable = true;
+  modules.sway = {
+    enable = true;
+    wallpaper = pkgs.fetchurl {
+      url = "https://files.catbox.moe/jv3ywu.jpg";
+      hash = "sha256-3oHN2lEYUbagehGBf5CIVLCjA+HhZv6WECeV9bqVfJE=";
+    };
+  };
 
   modules.fnott.enable = true;
 
