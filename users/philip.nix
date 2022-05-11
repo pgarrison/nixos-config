@@ -52,6 +52,10 @@ rec {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  home.sessionVariables = {
+    EDITOR = "vim";
+  };
+
   programs.git = {
     enable = true;
     aliases = {
