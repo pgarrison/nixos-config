@@ -118,12 +118,12 @@ in
           "${modifier}+Shift+l" = "move right 20";
 
           "${modifier}+f" = "fullscreen toggle";
-          "${modifier}+Shift+space" = "floating toggle";
-          "${modifier}+space" = "focus mode_toggle";
+          #"${modifier}+Shift+space" = "floating toggle";
+          #"${modifier}+space" = "focus mode_toggle";
 
           # modes
-          "${modifier}+r" = "mode resize";
-          "${modifier}+F11" = "mode passthrough";
+          #"${modifier}+r" = "mode resize";
+          #"${modifier}+F11" = "mode passthrough";
 
           "${modifier}+1" = "workspace number 1";
           "${modifier}+2" = "workspace number 2";
@@ -180,6 +180,7 @@ in
           "${modifier}+n" = "fnottctl dismiss";
         };
 
+        /*
         modes = {
           resize = {
             "h" = "resize shrink width 50 px";
@@ -192,6 +193,7 @@ in
 
           passthrough = { "${modifier}+F11" = "mode default"; };
         };
+        */
 
         bars = [{ command = "waybar"; }];
         colors = with colorscheme.colors; {

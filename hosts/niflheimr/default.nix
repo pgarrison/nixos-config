@@ -102,6 +102,7 @@
     firefox
     foot # terminal emulator
     fzf
+    grim
     lshw
     lynx
     mpv
@@ -109,6 +110,7 @@
     #nixos-options
     nix-prefetch-scripts
     pamixer
+    peek
     qt5.qtwayland # For sway/gdm/wayland. Maybe unneeded?
     ranger
     rbw # community bitwarden cli (replaces bitwarden-cli)
