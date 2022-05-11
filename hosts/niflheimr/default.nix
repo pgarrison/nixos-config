@@ -126,7 +126,6 @@
     which
     xsel
     zoom-us # very unfree
-    zsh
     #  romkatv/zsh4humans needs packaging
   ];
 
@@ -163,7 +162,7 @@
     };
   };
   
-  programs.fish.enable = true;
+  programs.neovim.defaultEditor = true;
   users.extraUsers.philip = {
     createHome = true;
     extraGroups = ["wheel" "video" "audio" "disk" "networkmanager"];
@@ -171,7 +170,7 @@
     home = "/home/philip";
     isNormalUser = true;
     uid = 1000;
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 
   environment.loginShellInit = ''

@@ -64,6 +64,7 @@ rec {
   programs.mcfly = {
     enable = true;
     enableFishIntegration = true;
+    enableZshIntegration = true;
   };
 
   programs.fish = {
@@ -72,6 +73,23 @@ rec {
       # disable startup shell message
       set fish_greeting
     '';
+  };
+
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
+    history.save = 100000; # number of lines to save
+    history.size = 100000; # number of lines to keep. What's the difference?
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+      ];
+    };
+    prezto = {
+      enable = true;
+      prompt.theme = "pure";
+    };
   };
 
   programs.neovim = {
