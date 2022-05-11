@@ -128,6 +128,7 @@ rec {
     extraConfig = ''
       set number
       colorscheme gruvbox
+      set mouse=a
     '';
   };
 
