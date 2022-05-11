@@ -67,6 +67,7 @@ rec {
     MOZ_ENABLE_WAYLAND = 1;
     XDG_CURRENT_DESKTOP = "sway";
     NIXOS_OZONE = 1;
+    LESS = "-RFX";
   };
 
   programs.git = {
