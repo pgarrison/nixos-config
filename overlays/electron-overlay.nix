@@ -13,10 +13,11 @@ let
 in
 super:
   {
-    slack = enableWayland super.slack "slack";
+    signal-desktop = enableWayland super.signal-desktop "signal-desktop";
+    #slack = enableWayland super.slack "slack";
     #discord = enableWayland super.discord "discord";
     #vscode = enableWayland super.vscode "code";
-    codium = enableWayland super.codium "codium";
+    #vscodium = enableWayland super.vscodium "vscodium";
     chromium = enableWayland super.chromium "chromium";
     /*
     google-chrome-beta = (
