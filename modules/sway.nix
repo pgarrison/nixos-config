@@ -241,15 +241,12 @@ in
           };
         };
 
-        /*
-        startup = [
-          {
-            command = ''remind -z -k"notify-send -t 5000 -a 'Remind' 'To-Do' %s"'';
-            always = false;
-          }
-        ];
-        */
       };
+
+      extraConfig = ''
+        workspace_auto_back_and_forth yes
+      '';
+
       extraSessionCommands = ''
         export SDL_VIDEODRIVER=wayland
 
