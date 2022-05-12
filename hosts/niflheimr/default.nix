@@ -75,6 +75,7 @@
     mpv
     networkmanagerapplet
     nix-prefetch-scripts
+    nvd
     pamixer
     qt5.qtwayland # For sway/gdm/wayland. Maybe unneeded?
     ranger
