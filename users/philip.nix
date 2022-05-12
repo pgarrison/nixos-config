@@ -66,8 +66,10 @@ rec {
     EDITOR = "vim";
     MOZ_ENABLE_WAYLAND = 1;
     XDG_CURRENT_DESKTOP = "sway";
-    NIXOS_OZONE = 1;
     LESS = "-RFX";
+    # for zsh plugin history-substring-search
+    HISTORY_SUBSTRING_SEARCH_PREFIXED = 1;
+    HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE = 1;
   };
 
   programs.git = {
