@@ -140,6 +140,20 @@ rec {
       set number
       colorscheme gruvbox
       set mouse=a
+
+      " Default to highlighting whole lines. Use shift V for highlighting smaller regions.
+      nnoremap v V
+      nnoremap V v
+      vnoremap v V
+      vnoremap V v
+
+      " Fancy save/esc commands
+      inoremap ;d <Esc>
+      vnoremap ;d <Esc>
+      inoremap ;f <C-O>:write<Cr>
+      nnoremap ;f :write<CR>
+      nnoremap ;q :q<CR>
+      nnoremap ;Q :qall<CR>
     '';
   };
 
