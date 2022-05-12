@@ -137,11 +137,13 @@ rec {
       # nvim-tree
       vim-surround
       gruvbox
+      nerdcommenter
     ];
     extraConfig = ''
       set number
       colorscheme gruvbox
       set mouse=a
+      let mapleader = " "
 
       " Default to highlighting whole lines. Use shift V for highlighting smaller regions.
       nnoremap v V
