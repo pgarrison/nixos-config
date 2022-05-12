@@ -16,7 +16,7 @@ let
 in
 super:
   {
-    #signal-desktop = enableWayland super.signal-desktop "signal-desktop";
+    signal-desktop = enableWayland super.signal-desktop "signal-desktop";
     #slack = enableWayland super.slack "slack";
     #discord = enableWayland super.discord "discord";
     #vscode = enableWayland super.vscode "code";
