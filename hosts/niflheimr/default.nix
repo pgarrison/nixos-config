@@ -77,7 +77,6 @@
     nix-prefetch-scripts
     nvd
     pamixer
-    qt5.qtwayland # For sway/gdm/wayland. Maybe unneeded? TODO: duplicate in modules/wayland.nix
     ranger
     redshift
     # An extremely fast alternative to grep that respects your gitignore
