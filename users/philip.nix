@@ -4,6 +4,7 @@ rec {
   imports = [
     nix-colors.homeManagerModule
     ../modules/fnott.nix
+    ../modules/git.nix
     ../modules/neovim.nix
     ../modules/sway.nix
     ../modules/waybar.nix
@@ -73,18 +74,7 @@ rec {
     HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE = 1;
   };
 
-  programs.git = {
-    enable = true;
-    aliases = {
-      lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
-      cm = "commit -m";
-      ap = "add -p";
-      dc = "diff --cached";
-      ds = "diff --stat";
-      dcs = "diff --cached --stat";
-    };
-    userName = "Philip Garrison";
-  };
+  modules.git.enable = true;
 
   # An upgraded ctrl-r for Bash whose history results make sense for what you're working on right now
   programs.mcfly = {
