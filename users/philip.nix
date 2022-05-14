@@ -3,9 +3,10 @@
 rec {
   imports = [
     nix-colors.homeManagerModule
-    ../modules/waybar.nix
-    ../modules/sway.nix
     ../modules/fnott.nix
+    ../modules/neovim.nix
+    ../modules/sway.nix
+    ../modules/waybar.nix
     ../modules/shell/alias.nix
   ];
 
@@ -127,39 +128,7 @@ rec {
     };
   };
 
-  programs.neovim = {
-    enable = true;
-    vimAlias = true; # symlink vim
-    plugins = with pkgs.vimPlugins; [
-      vim-nix
-      # bufferline
-      # lualine
-      # nvim-tree
-      vim-surround
-      gruvbox
-      nerdcommenter
-    ];
-    extraConfig = ''
-      set number
-      colorscheme gruvbox
-      set mouse=a
-      let mapleader = " "
-
-      " Default to highlighting whole lines. Use shift V for highlighting smaller regions.
-      nnoremap v V
-      nnoremap V v
-      vnoremap v V
-      vnoremap V v
-
-      " Fancy save/esc commands
-      inoremap ;d <Esc>
-      vnoremap ;d <Esc>
-      inoremap ;f <C-O>:write<Cr>
-      nnoremap ;f :write<CR>
-      nnoremap ;q :q<CR>
-      nnoremap ;Q :qall<CR>
-    '';
-  };
+  modules.neovim.enable = true;
 
   programs.foot = {
     enable = true;
