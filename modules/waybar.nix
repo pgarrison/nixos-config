@@ -110,9 +110,9 @@ in
         };
 
         "clock" = {
-          format = "🐢 {:%H:%M}";
+          format = "🐢 {:%b %d %H:%M}";
           format-alt = "🐢 {:%a, %d %b %Y}";
-          tooltip-format = "<big>{:%Y %B}</big>\n<small>{calendar}</small>";
+          tooltip-format = "<big>{:%Y %B %d}</big>\n<small>{calendar}</small>";
         };
 
         "mpd" = {
