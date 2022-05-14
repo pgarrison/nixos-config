@@ -4,7 +4,7 @@
 
 { config, pkgs, ... }:
 
-{
+rec {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -138,6 +138,11 @@
   };
 
   services.getty.autologinUser = "philip";
+
+  # make ~/Downloads temporary (30 days)
+  systemd.tmpfiles.rules = [
+    "d ${users.extraUsers.philip.home}/Downloads 0755 philip users 30d"
+  ];
 
   environment.loginShellInit = ''
     [[ "$(tty)" == /dev/tty1 ]] && WLR_NO_HARDWARE_CURSORS=1 sway
