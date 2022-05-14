@@ -1,10 +1,13 @@
-{ pkgs, lib, config, specialArgs, ... }:
+inputs @ { pkgs, lib, config, specialArgs, ... }:
 
 with lib;
 
 let
   cfg = config.modules.sway;
-
+  # This belongs in the top level flake.nix but I can't figure out how to pass it
+  # along properly from there
+  mylib = import ../lib { inherit inputs pkgs lib; };
+  import-gsettings = mylib._.buildBinScript "import-gsettings";
   inherit (config) colorscheme;
 in
 {
@@ -26,6 +29,7 @@ in
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
+      import-gsettings
       fuzzel
       imv
       swaylock
@@ -45,6 +49,7 @@ in
       #xwayland = cfg.xwayland;
       config = rec {
         startup = [
+          { command = "import-gsettings"; always = true; }
           {
             command = "wlr-randr --output eDP-1 --scale 1.5";
             always = true;
