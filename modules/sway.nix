@@ -24,6 +24,11 @@ in
         type = types.nullOr types.path;
         default = null;
       };
+
+      cursorSize = mkOption {
+        type = types.int;
+        default = 48;
+      };
     };
   };
 
@@ -41,6 +46,18 @@ in
       wf-recorder
       wlr-randr
     ];
+
+    gtk = {
+      enable = true;
+      #gtk-cursor-theme-name="${cfg.cursorTheme.name}"
+      gtk2.extraConfig = ''
+        gtk-cursor-theme-size=${toString cfg.cursorSize}
+      '';
+      gtk3.extraConfig = {
+        #gtk-cursor-theme-name = cfg.cursorTheme.name;
+        gtk-cursor-theme-size = cfg.cursorSize;
+      };
+    };
 
     wayland.windowManager.sway = {
       enable = true;
