@@ -98,6 +98,9 @@ rec {
 
   xdg.portal.wlr.enable = true; # support screensharing with sway
 
+  # Set gtk themes
+  services.dbus.packages = [ pkgs.dconf ];
+
   services.physlock = import ../../modules/physlock.nix;
 
   programs.htop.enable = true;

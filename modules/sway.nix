@@ -25,9 +25,14 @@ in
         default = null;
       };
 
-      cursorSize = mkOption {
+      cursorTheme.size = mkOption {
         type = types.int;
         default = 48;
+      };
+
+      cursorTheme.name = mkOption {
+        type = types.str;
+        default = "capitaine-cursors";
       };
     };
   };
@@ -49,15 +54,23 @@ in
 
     gtk = {
       enable = true;
-      #gtk-cursor-theme-name="${cfg.cursorTheme.name}"
+      font.name = "SF Pro Display 11";
       gtk2.extraConfig = ''
-        gtk-cursor-theme-size=${toString cfg.cursorSize}
+        gtk-cursor-theme-name="${cfg.cursorTheme.name}"
+        gtk-cursor-theme-size=${toString cfg.cursorTheme.size}
       '';
       gtk3.extraConfig = {
-        #gtk-cursor-theme-name = cfg.cursorTheme.name;
-        gtk-cursor-theme-size = cfg.cursorSize;
+        gtk-cursor-theme-name = cfg.cursorTheme.name;
+        gtk-cursor-theme-size = cfg.cursorTheme.size;
       };
     };
+
+    home.file.".icons/default/index.theme".text = ''
+      [icon theme]
+      Name=Default
+      Comment=Default Cursor Theme
+      Inherits=${cfg.cursorTheme.name}
+    '';
 
     wayland.windowManager.sway = {
       enable = true;
