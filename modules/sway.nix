@@ -250,12 +250,12 @@ in
       extraSessionCommands = ''
         export SDL_VIDEODRIVER=wayland
 
+        # Default was 24, too small
+        export XCURSOR_SIZE=72
+
         # needs qt5.qtwayland in systemPackages
         export QT_QPA_PLATFORM=wayland
         export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
-        export QT_SCALE_FACTOR="2";
-        export QT_QPA_PLATFORMTHEME="qt5ct";
-        export QT_WAYLAND_FORCE_DPI="physical";
       '';
     };
 
