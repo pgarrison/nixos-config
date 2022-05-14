@@ -45,6 +45,25 @@ in
         nnoremap ;f :write<CR>
         nnoremap ;q :q<CR>
         nnoremap ;Q :qall<CR>
+
+        " up & down arrow keys scroll the page in normal mode
+        map <Up> <C-Y>
+        map <Down> <C-E>
+
+        " switch auto tabbing off for pasting
+        set pastetoggle=<F2>
+
+        function! MoveFile(newspec)
+             let old = expand('%')
+             " could be improved:
+             if (old == a:newspec)
+                 return 0
+             endif
+             exe 'sav' fnameescape(a:newspec)
+             call delete(old)
+        endfunction
+
+        command! -nargs=1 -complete=file -bar MoveFile call MoveFile('<args>')
       '';
     };
   };
