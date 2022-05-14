@@ -8,10 +8,12 @@ gtk_theme="$(grep 'gtk-theme-name' "$config" | cut -d'=' -f2)"
 icon_theme="$(grep 'gtk-icon-theme-name' "$config" | cut -d'=' -f2)"
 cursor_theme="$(grep 'gtk-cursor-theme-name' "$config" | cut -d'=' -f2)"
 font_name="$(grep 'gtk-font-name' "$config" | cut -d'=' -f2)"
-gsettings set "$gnome_schema" gtk-theme "$gtk_theme"
-gsettings set "$gnome_schema" icon-theme "$icon_theme"
-gsettings set "$gnome_schema" cursor-theme "$cursor_theme"
-gsettings set "$gnome_schema" font-name "$font_name"
+gsettings set "$gnome_schema" gtk-theme "$gtk_theme" &> /home/philip/gsettings.log
+gsettings set "$gnome_schema" icon-theme "$icon_theme" &>> /home/philip/gsettings.log
+gsettings set "$gnome_schema" cursor-theme "$cursor_theme" &>> /home/philip/gsettings.log
+gsettings set "$gnome_schema" font-name "$font_name" &>> /home/philip/gsettings.log
 
 echo "help" >> /home/philip/gsettings.log
-echo $(gsettings get "$gnome_schema" cursor-theme "$cursor_theme") >> /home/philip/gsettings.log
+echo $gnome_schema >> /home/philip/gsettings.log
+echo $cursor_theme >> /home/philip/gsettings.log
+gsettings get "$gnome_schema" cursor-theme "$cursor_theme" >> /home/philip/gsettings.log

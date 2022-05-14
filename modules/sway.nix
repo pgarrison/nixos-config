@@ -106,7 +106,7 @@ in
         */
 
         seat."*" = {
-          hide_cursor = "when-typing enabled";
+          #hide_cursor = "when-typing enabled";
         };
 
         output."*" = mkIf (!(isNull cfg.wallpaper)) {

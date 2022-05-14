@@ -70,6 +70,7 @@ rec {
     fzf
     glances
     grim # screenshots
+    gtk3 # only installed to have the `gsettings` program, which configures cursor size for firefox and others
     lshw
     lynx
     mpv
