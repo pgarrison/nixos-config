@@ -139,6 +139,8 @@ rec {
 
   services.getty.autologinUser = "philip";
 
+  programs.dconf.enable = true;
+
   # make ~/Downloads temporary (30 days)
   systemd.tmpfiles.rules = [
     "d ${users.extraUsers.philip.home}/Downloads 0755 philip users 30d"

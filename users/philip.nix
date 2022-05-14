@@ -8,6 +8,7 @@ rec {
     ../modules/neovim.nix
     ../modules/sway.nix
     ../modules/waybar.nix
+    ../modules/gtk.nix
     ../modules/shell/alias.nix
   ];
 
