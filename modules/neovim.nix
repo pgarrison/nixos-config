@@ -40,6 +40,7 @@ in
         " Fancy save/esc commands
         inoremap ;d <Esc>
         vnoremap ;d <Esc>
+        nnoremap ;d <Esc>
         inoremap ;f <C-O>:write<Cr>
         nnoremap ;f :write<CR>
         nnoremap ;q :q<CR>
