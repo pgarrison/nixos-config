@@ -148,7 +148,7 @@ rec {
   ];
 
   environment.loginShellInit = ''
-    [[ "$(tty)" == /dev/tty1 ]] && WLR_NO_HARDWARE_CURSORS=1 sway
+    [[ "$(tty)" == /dev/tty1 ]] && sway -d &> /home/philip/sway.log
   '';
 
   # Some programs need SUID wrappers, can be configured further or are

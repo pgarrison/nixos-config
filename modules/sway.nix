@@ -286,7 +286,7 @@ in
       extraSessionCommands = ''
         export SDL_VIDEODRIVER=wayland
 
-        # Default was 24, too small
+        # Default was 24, too small. this is ignored
         export XCURSOR_SIZE=72
 
         # needs qt5.qtwayland in systemPackages
