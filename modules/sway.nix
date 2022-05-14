@@ -253,6 +253,9 @@ in
         # needs qt5.qtwayland in systemPackages
         export QT_QPA_PLATFORM=wayland
         export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+        export QT_SCALE_FACTOR="2";
+        export QT_QPA_PLATFORMTHEME="qt5ct";
+        export QT_WAYLAND_FORCE_DPI="physical";
       '';
     };
 
