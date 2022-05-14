@@ -54,7 +54,8 @@ in
 
     gtk = {
       enable = true;
-      font.name = "SF Pro Display 11";
+      theme.name = "Materia-dark";
+      theme.package = pkgs.materia-theme;
       gtk2.extraConfig = ''
         gtk-cursor-theme-name="${cfg.cursorTheme.name}"
         gtk-cursor-theme-size=${toString cfg.cursorTheme.size}
