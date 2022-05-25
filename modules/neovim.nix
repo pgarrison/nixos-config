@@ -50,6 +50,11 @@ in
         map <Up> <C-Y>
         map <Down> <C-E>
 
+        " copy to clipboard
+        set clipboard=unnamed,unnamedplus
+        vnoremap ;y "*y
+        nnoremap ;y "*y
+
         " switch auto tabbing off for pasting
         set pastetoggle=<F2>
 
