@@ -77,6 +77,7 @@ rec {
     nix-prefetch-scripts
     nvd
     pamixer
+    pavucontrol
     ranger
     redshift
     # An extremely fast alternative to grep that respects your gitignore
