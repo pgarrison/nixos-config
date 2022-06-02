@@ -84,6 +84,7 @@ rec {
     # A community effort to simplify man pages with practical examples
     tealdeer
     tree
+    unzip
     vscodium
     wget
     which
