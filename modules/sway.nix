@@ -28,6 +28,7 @@ in
     home.packages = with pkgs; [
       fuzzel
       imv
+      swayidle
       swaylock
       wl-clipboard
       grim
@@ -37,6 +38,24 @@ in
       wf-recorder
       wlr-randr
     ];
+
+    /*
+    services.swayidle = {
+      enable = true;
+      timeouts = [
+        # 5 minutes
+        {
+          timeout = 10;
+          command       = "swaymsg 'output * dpms off'";
+          resumeCommand = "swaymsg 'output * dpms on'";
+        }
+        # 5 minutes 30 seconds
+        { timeout = 20; command = "systemctl hybrid-sleep"; }
+        # 30 minutes
+        { timeout = 40; command = "systemctl hibernate"; }
+      ];
+    };
+    */
 
     wayland.windowManager.sway = {
       enable = true;
