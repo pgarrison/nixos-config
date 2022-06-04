@@ -54,7 +54,6 @@ rec {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    autojump
     bat # better cat
     bitwarden-cli
     bw-ssh # provided by my bw-ssh.nix
@@ -104,6 +103,7 @@ rec {
 
   services.physlock = import ../../modules/physlock.nix;
 
+  programs.autojump.enable = true;
   programs.htop.enable = true;
   programs.neovim.enable = true;
   programs.light.enable = true; # backlight
