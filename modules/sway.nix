@@ -126,6 +126,7 @@ in
         keybindings = {
           # open terminal
           "${modifier}+Return" = "exec ${pkgs.foot}/bin/foot";
+          "${modifier}+Shift+Return" = "splitv, exec ${pkgs.foot}/bin/foot";
 
           # open launcher
           "${modifier}+d" = ''exec ${toString [
