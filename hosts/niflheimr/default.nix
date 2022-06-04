@@ -92,7 +92,6 @@ rec {
     xsel
     zathura
     zoom-us # very unfree
-    #  romkatv/zsh4humans needs packaging
   ];
 
   xdg.portal.wlr.enable = true; # support screensharing with sway
