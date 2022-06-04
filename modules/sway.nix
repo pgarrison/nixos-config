@@ -39,23 +39,21 @@ in
       wlr-randr
     ];
 
-    /*
     services.swayidle = {
       enable = true;
       timeouts = [
         # 5 minutes
         {
-          timeout = 10;
+          timeout = 300;
           command       = "swaymsg 'output * dpms off'";
           resumeCommand = "swaymsg 'output * dpms on'";
         }
         # 5 minutes 30 seconds
-        { timeout = 20; command = "systemctl hybrid-sleep"; }
+        { timeout = 330; command = "systemctl hybrid-sleep"; }
         # 30 minutes
-        { timeout = 40; command = "systemctl hibernate"; }
+        { timeout = 1800; command = "systemctl hibernate"; }
       ];
     };
-    */
 
     wayland.windowManager.sway = {
       enable = true;
