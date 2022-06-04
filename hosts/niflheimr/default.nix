@@ -2,8 +2,11 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, ... } @ inputs:
 
+let
+  bw-ssh = (import ../../modules/shell/bw-ssh.nix) inputs;
+in
 rec {
   imports =
     [ # Include the results of the hardware scan.
@@ -54,6 +57,7 @@ rec {
     autojump
     bat # better cat
     bitwarden-cli
+    bw-ssh # provided by my bw-ssh.nix
     cava # alsa visualizations
     chromium
     curl
