@@ -42,14 +42,14 @@ in
     services.swayidle = {
       enable = true;
       timeouts = [
-        # 5 minutes
+        # 10 minutes
         {
-          timeout = 300;
+          timeout = 600;
           command       = "swaymsg 'output * dpms off'";
           resumeCommand = "swaymsg 'output * dpms on'";
         }
-        # 5 minutes 30 seconds
-        { timeout = 330; command = "systemctl hybrid-sleep"; }
+        # 10 minutes 30 seconds
+        { timeout = 630; command = "systemctl hybrid-sleep"; }
         # 30 minutes
         { timeout = 1800; command = "systemctl hibernate"; }
       ];
