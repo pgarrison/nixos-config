@@ -12,6 +12,16 @@ rec {
     ../modules/shell/alias.nix
   ];
 
+  services.gammastep = {
+    enable = true;
+    latitude = 47.606;
+    longitude = -122.332;
+    temperature = {
+      day = 4200;
+      night = 3700;
+    };
+  };
+
   modules.waybar = {
     enable = true;
     bars."eDP-1" = {

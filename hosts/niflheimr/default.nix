@@ -68,6 +68,7 @@ rec {
     firefox
     foot # terminal emulator
     fzf
+    gammastep
     glances
     grim # screenshots
     lshw
@@ -79,7 +80,6 @@ rec {
     pamixer
     pavucontrol
     ranger
-    redshift
     # An extremely fast alternative to grep that respects your gitignore
     ripgrep
     scrot
@@ -112,22 +112,6 @@ rec {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  };
-
-  # redshift things
-  location.latitude = 47.606;
-  location.longitude = -122.332;
-
-  services.redshift = {
-    enable = true;
-    brightness = {
-      day = "1.0";
-      night = "0.7";
-    };
-    temperature = {
-      day = 4900;
-      night = 4200;
-    };
   };
   
   programs.neovim.defaultEditor = true;
