@@ -162,9 +162,16 @@ rec {
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
+  # Turn on cups
   services.printing.enable = true;
   programs.system-config-printer.enable = true;
+  # Let cups find network printers
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+  };
+  # Setup drivers for Brother printers
+  services.printing.drivers = [ pkgs.brlaser ];
 
   programs.ssh.startAgent = true;
 
