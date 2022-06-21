@@ -211,6 +211,9 @@ in
 
           # fnott notifications
           "${modifier}+n" = "fnottctl dismiss";
+
+          # lock
+          "${modifier}+z" = "systemctl suspend";
         };
 
         modes = {
