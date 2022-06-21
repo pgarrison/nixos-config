@@ -99,7 +99,7 @@ rec {
 
   xdg.portal.wlr.enable = true; # support screensharing with sway
 
-  services.logind.lidSwitch = "suspend-then-hibernate";
+  #services.logind.lidSwitch = "suspend-then-hibernate";
 
   services.physlock = import ../../modules/physlock.nix;
 
