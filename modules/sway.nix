@@ -49,9 +49,7 @@ in
           resumeCommand = "swaymsg 'output * dpms on'";
         }
         # 10 minutes 30 seconds
-        { timeout = 630; command = "systemctl hybrid-sleep"; }
-        # 30 minutes
-        { timeout = 1800; command = "systemctl hibernate"; }
+        { timeout = 630; command = "systemctl suspend-then-hibernate"; }
       ];
     };
 
