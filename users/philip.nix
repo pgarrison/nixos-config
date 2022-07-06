@@ -22,9 +22,8 @@ rec {
     };
   };
 
-  modules.waybar = {
-    enable = true;
-    bars."eDP-1" = {
+  modules.waybar = let
+    default = {
       modules-left = [
         #"custom/scratchpad" # Turns windows into floating windows
         "sway/workspaces"
@@ -41,6 +40,11 @@ rec {
         "clock"
       ];
     };
+  in
+  {
+    enable = true;
+    bars."eDP-1" = default;
+    bars."DP-2" = default;
   };
 
   modules.sway = {
