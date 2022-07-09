@@ -94,7 +94,7 @@ rec {
     wlr-randr
     xsel
     zathura
-    zoom-us # very unfree
+    #zoom-us # very unfree
   ];
 
   xdg.portal.wlr.enable = true; # support screensharing with sway
