@@ -15,6 +15,8 @@ rec {
       ../../modules/wayland.nix
     ];
 
+  hardware.keyboard.zsa.enable = true;
+
   modules.wayland.enable = true;
 
   boot.initrd.luks.devices = {
@@ -89,6 +91,7 @@ rec {
     tree
     unzip
     vscodium
+    wally-cli
     wget
     which
     wlr-randr
