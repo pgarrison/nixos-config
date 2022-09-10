@@ -44,6 +44,7 @@ rec {
   {
     enable = true;
     bars."eDP-1" = default;
+    bars."DP-1" = default;
     bars."DP-2" = default;
   };
 
