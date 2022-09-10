@@ -127,7 +127,7 @@ in
           "${modifier}+Shift+Return" = "splitv, exec ${pkgs.foot}/bin/foot";
 
           # open launcher
-          "${modifier}+d" = ''exec ${toString [
+          "${modifier}+Space" = ''exec ${toString [
             "fuzzel -P 'run: '"
             "-f 'JetBrains Mono:size=10'" #"-i '${config.gtk.iconTheme.name}'"
             "-r 2 -B 3 -y 20 -p 10"
