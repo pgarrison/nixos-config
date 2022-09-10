@@ -34,6 +34,7 @@ fi
 # Retrieve key from Bitwarden
 bw logout --quiet
 export BW_SESSION=$(bw login llamallamda@gmail.com --raw)
+bw sync
 PASSWD=$(bw get password "passphrase: $(basename ${KEY_NAME})")
 
 # In case bw exitted non-zero we have no password
