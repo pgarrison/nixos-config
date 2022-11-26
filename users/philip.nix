@@ -6,8 +6,8 @@ rec {
     ../modules/fnott.nix
     ../modules/git.nix
     ../modules/neovim.nix
-    ../modules/sway.nix
-    ../modules/waybar.nix
+    #../modules/sway.nix
+    #../modules/waybar.nix
     ../modules/gtk.nix
     ../modules/shell/alias.nix
   ];
@@ -22,6 +22,7 @@ rec {
     };
   };
 
+  /*
   modules.waybar = let
     default = {
       modules-left = [
@@ -57,6 +58,7 @@ rec {
       hash = "sha256-MQX3Tc+rW6u+XSO3gM2+lpy6q/fsVrMOkoQ5i/Dde64=";
     };
   };
+  */
 
   modules.fnott.enable = true;
 

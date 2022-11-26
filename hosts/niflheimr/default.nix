@@ -13,11 +13,13 @@ rec {
       ./hardware-configuration.nix
       ../../modules/fonts.nix
       ../../modules/wayland.nix
+      ../../modules/gnome.nix
     ];
 
   hardware.keyboard.zsa.enable = true;
 
-  modules.wayland.enable = true;
+  #modules.wayland.enable = true;
+  modules.gnome.enable = true;
 
   boot.initrd.luks.devices = {
     root = {
@@ -104,7 +106,7 @@ rec {
 
   #services.logind.lidSwitch = "suspend-then-hibernate";
 
-  services.physlock = import ../../modules/physlock.nix;
+  #services.physlock = import ../../modules/physlock.nix;
 
   programs.autojump.enable = true;
   programs.htop.enable = true;
