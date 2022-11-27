@@ -75,6 +75,8 @@ rec {
     gammastep
     glances
     grim # screenshots
+    htmlq # html parser like jq
+    jq # json parser
     lshw
     lynx
     mpv
@@ -88,7 +90,7 @@ rec {
     ripgrep
     scrot
     signal-desktop
-    # A community effort to simplify man pages with practical examples
+    # A community effort to simplify man pages with practical examples; tldr
     tealdeer
     tree
     unzip
