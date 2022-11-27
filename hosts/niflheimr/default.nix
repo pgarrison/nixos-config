@@ -110,7 +110,6 @@ rec {
 
   #services.physlock = import ../../modules/physlock.nix;
 
-  programs.autojump.enable = true;
   programs.htop.enable = true;
   programs.neovim.enable = true;
   programs.light.enable = true; # backlight
