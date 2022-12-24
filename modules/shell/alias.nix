@@ -1,6 +1,7 @@
 { home, ... }:
 { 
   home.shellAliases = {
+    develop = "nix develop --command zsh";
     kexp = "mpv http://live-mp3-128.kexp.org";
     moon = "curl 'wttr.in/moon?Seattle+US'";
     nixos-list-updates = ''ls -v /nix/var/nix/profiles | tail -n 2 | awk '{print "/nix/var/nix/profiles/" $0}' - | xargs nvd diff'';
