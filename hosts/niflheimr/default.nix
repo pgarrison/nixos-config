@@ -74,6 +74,7 @@ rec {
     fzf
     gammastep
     glances
+    google-chrome
     grim # screenshots
     htmlq # html parser like jq
     jq # json parser
