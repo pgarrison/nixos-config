@@ -17,8 +17,9 @@ in
       enable = true;
       aliases = {
         lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
-        cm = "commit -m";
+        amend = "commit --amend";
         ap = "add -p";
+        cm = "commit -m";
         dc = "diff --cached";
         ds = "diff --stat";
         dcs = "diff --cached --stat";
