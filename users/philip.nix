@@ -92,6 +92,12 @@ rec {
     HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE = 1;
   };
 
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
   modules.git.enable = true;
 
   # An upgraded ctrl-r for Bash whose history results make sense for what you're working on right now
