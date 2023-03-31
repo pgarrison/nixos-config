@@ -25,6 +25,7 @@ in
         dcs = "diff --cached --stat";
         rs = "restore --staged .";
       };
+      lfs.enable = true;
       userName = "Philip Garrison";
     };
   };
