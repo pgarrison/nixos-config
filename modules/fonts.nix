@@ -13,6 +13,9 @@
       cascadia-code
       jetbrains-mono
 
+      # nice regular fonts for creating documents
+      lato
+
       # nerd fonts
       (nerdfonts.override {
         fonts = [
