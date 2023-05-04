@@ -31,6 +31,9 @@ rec {
     };
   };
 
+  # Suspend-to-RAM. See result with `cat /sys/power/mem_sleep`
+  boot.kernelParams = [ "mem_sleep_default=deep" ];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -175,6 +178,18 @@ rec {
   services.printing.drivers = [ pkgs.brlaser ];
 
   programs.ssh.startAgent = true;
+
+  /*
+   * This line shouldn't be needed because it's set in users/philip.nix, but
+   * without it I get the error
+   *   Failed assertions:
+   *   - users.users.philip.shell is set to zsh, but
+   *   programs.zsh.enable is not true. This will cause the zsh
+   *   shell to lack the basic nix directories in its PATH and might make
+   *   logging in as that user impossible. You can fix it with:
+   *   programs.zsh.enable = true;
+   */
+  programs.zsh.enable = true;
 
   # Docker!
   virtualisation.docker.enable = true;
