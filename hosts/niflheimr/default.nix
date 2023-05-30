@@ -61,11 +61,6 @@ rec {
     (import ../../overlays/electron-overlay.nix)
   ];
 
-  # For League of Legends
-  hardware.opengl.driSupport32Bit = true;
-  hardware.opengl.enable = true;
-  hardware.pulseaudio.support32Bit = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -108,7 +103,6 @@ rec {
     tree
     unzip
     vscodium
-    vulkan-tools # for League and other directx games?
     wally-cli
     wget
     which
