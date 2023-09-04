@@ -123,7 +123,7 @@ rec {
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting.enable = true;
     history.save = 100000; # number of lines to save
     history.size = 100000; # number of lines to keep. What's the difference?
 

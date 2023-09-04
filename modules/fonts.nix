@@ -8,7 +8,7 @@
       serif = [ "Noto Serif" ];
     };
 
-    fonts = with pkgs; [
+    packages = with pkgs; [
       # programming fonts
       cascadia-code
       jetbrains-mono
