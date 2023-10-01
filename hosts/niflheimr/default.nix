@@ -71,7 +71,7 @@ rec {
     chromium
     curl
     curlie # more user-friendly curl
-    exa
+    eza
     expect
     fd # A simple, fast and user-friendly alternative to find
     feh
