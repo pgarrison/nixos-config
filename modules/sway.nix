@@ -38,6 +38,10 @@ in
       wf-recorder
       wlr-randr
     ];
+    # Untested. Need to set this here or in users/philip.nix
+    #home.sessionVariables = {
+      #XDG_CURRENT_DESKTOP = "sway";
+    #}
 
     services.swayidle = {
       enable = true;

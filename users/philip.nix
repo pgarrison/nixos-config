@@ -85,7 +85,6 @@ rec {
   home.sessionVariables = {
     EDITOR = "vim";
     MOZ_ENABLE_WAYLAND = 1;
-    XDG_CURRENT_DESKTOP = "sway";
     LESS = "-RFX";
     # for zsh plugin history-substring-search
     HISTORY_SUBSTRING_SEARCH_PREFIXED = 1;

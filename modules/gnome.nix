@@ -25,12 +25,12 @@ in
     ]) ++ (with pkgs.gnome; [
       cheese # webcam tool
       gnome-music
-      gnome-terminal
+      #gnome-terminal
       gedit # text editor
       epiphany # web browser
       geary # email reader
       evince # document viewer
-      gnome-characters
+      #nome-characters
       totem # video player
       tali # poker game
       iagno # go game

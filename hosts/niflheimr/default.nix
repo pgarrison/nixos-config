@@ -166,7 +166,7 @@ rec {
   # Let cups find network printers
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
   };
   # Setup drivers for Brother printers
   services.printing.drivers = [ pkgs.brlaser ];
