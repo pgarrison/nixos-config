@@ -16,6 +16,10 @@ in
     services.xserver.enable = true;
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
+    # displaylink uses binary unfree blob. Must be manually added via
+    # nix-prefetch-url --name displaylink-580.zip https://www.synaptics.com/sites/default/files/exe_files/2023-08/DisplayLink%20USB%20Graphics%20Software%20for%20Ubuntu5.8-EXE.zip
+    # See https://nixos.wiki/wiki/Displaylink for more
+    services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
 
     services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
